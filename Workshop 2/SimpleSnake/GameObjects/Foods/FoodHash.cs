@@ -1,10 +1,10 @@
-﻿namespace WorkshopSKaskata.GameObjects.Foods;
+﻿namespace SimpleSnake.GameObjects.Foods;
 
-internal class FoodHash : Food
+public class FoodHash : Food
 {
     private const char symbol = '#';
-
-    public FoodHash() : base(symbol, 3)
+    private const int points = 3;
+    public FoodHash() : base(symbol, points)
     {
     }
 }

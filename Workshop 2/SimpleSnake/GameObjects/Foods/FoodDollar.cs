@@ -1,10 +1,10 @@
-﻿namespace WorkshopSKaskata.GameObjects.Foods;
+﻿namespace SimpleSnake.GameObjects.Foods;
 
-internal class FoodDollar : Food
+public class FoodDollar : Food
 {
     private const char symbol = '$';
-
-    public FoodDollar() : base(symbol, 2)
+    private const int points = 2;
+    public FoodDollar() : base(symbol, points)
     {
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace WorkshopSKaskata.GameObjects;
+﻿namespace SimpleSnake.GameObjects;
 
 public class Point
 {
@@ -9,4 +9,17 @@ public class Point
     }
     public int X { get; set; }
     public int Y { get; set; }
+
+    public virtual bool CollidesWith(Point point)
+    {
+        return point.X == X &&
+               point.Y == Y;
+    }
+
+    public static Point GetNextPoint(Point direction, Point point)
+    {
+        return new Point(
+            point.X + direction.X,
+            point.Y + direction.Y);
+    }
 }

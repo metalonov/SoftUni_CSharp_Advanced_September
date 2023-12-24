@@ -1,8 +1,9 @@
-﻿namespace WorkshopSKaskata.GameObjects.Foods;
+﻿namespace SimpleSnake.GameObjects.Foods;
 
-internal class Food : GameObject
+public class Food : GameObject
 {
-    public Food(char drawSymbol, int points) : base(drawSymbol)
+    public Food(char drawSymbol, int points)
+        : base(drawSymbol)
     {
         Points = points;
     }

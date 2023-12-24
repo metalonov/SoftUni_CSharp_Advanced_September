@@ -1,9 +1,10 @@
-﻿namespace WorkshopSKaskata.GameObjects.Foods;
+﻿namespace SimpleSnake.GameObjects.Foods;
 
-internal class FoodAsterisk : Food
+public class FoodAsterisk : Food
 {
     private const char symbol = '*';
-    public FoodAsterisk() : base(symbol, 1)
+    private const int points = 1;
+    public FoodAsterisk() : base(symbol, points)
     {
     }
 }

@@ -1,10 +1,7 @@
-﻿
-namespace WorkshopSKaskata.GameObjects;
-
-internal class Wall : GameObject
+﻿namespace SimpleSnake.GameObjects;
+public class Wall : GameObject
 {
     private const char WallSymbol = '\u25A0';
-
 
     public Wall(int x, int y)
         : base(WallSymbol, x, y)
@@ -16,8 +13,8 @@ internal class Wall : GameObject
         DrawHorizontalLine(0);
         DrawHorizontalLine(Y);
 
-        DrawVerticalLine(X - 1);
         DrawVerticalLine(0);
+        DrawVerticalLine(X - 1);
     }
 
     private void DrawVerticalLine(int columns)
@@ -36,5 +33,12 @@ internal class Wall : GameObject
             GameObject drawPoint = new GameObject(DrawSymbol, row, rows);
             drawPoint.Draw();
         }
+    }
+    public override bool CollidesWith(Point point)
+    {
+        return point.X == X - 1 ||
+               point.Y == Y ||
+               point.X == 0 ||
+               point.Y == 0;
     }
 }

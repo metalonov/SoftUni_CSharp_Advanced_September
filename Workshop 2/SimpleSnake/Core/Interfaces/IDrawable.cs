@@ -1,8 +1,7 @@
-﻿namespace WorkshopSKaskata.Core.Interfaces;
+﻿namespace SimpleSnake.Core.Interfaces;
 
-internal interface IDrawable
+public interface IDrawable
 {
     char DrawSymbol { get; }
-
     void Draw();
 }
